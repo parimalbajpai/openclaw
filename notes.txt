@@ -1,0 +1,8 @@
+1. OpenClaw on Ubuntu VM (UTM on Macbook Air/M3)
+
+Challenge #1: M3 is ARM, and there is no official Chrome for Ubuntu/ARM. Firefox doesn't work with OpenClaw.
+Tried alternatives like: Chromium and Brave.
+There is some awkwardness in this setup where the browser window opened by OpenClaw is unable to download files. It was quite a task to get "Relay" to work as an extension, and force OpenClaw to reuse browser window opened by me.
+
+Challenge #2: I keep running into ratelimit and cooldown with Anthropic and Google AI Studio.
+DeepSeek is running well. I haven't tried OpenAI and others yet.
