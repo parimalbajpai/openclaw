@@ -4,5 +4,8 @@ Challenge #1: M3 is ARM, and there is no official Chrome for Ubuntu/ARM. Firefox
 Tried alternatives like: Chromium and Brave.
 There is some awkwardness in this setup where the browser window opened by OpenClaw is unable to download files. It was quite a task to get "Relay" to work as an extension, and force OpenClaw to reuse browser window opened by me.
 
-Challenge #2: I keep running into ratelimit and cooldown with Anthropic and Google AI Studio.
+Challenge #2: On Mac UTM, set the VM to use a different MAC and get its own IP address. Don't reuse Mac's internet connection. There was some trouble for UTM to reuse Mac's IP properly in IPv6 format, and blocked Telegram from working properly.
+
+Challenge #3: I keep running into ratelimit and cooldown with Anthropic and Google AI Studio.
 DeepSeek is running well. I haven't tried OpenAI and others yet.
+
