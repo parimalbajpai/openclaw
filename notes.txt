@@ -9,3 +9,5 @@ Challenge #2: On Mac UTM, set the VM to use a different MAC and get its own IP a
 Challenge #3: I keep running into ratelimit and cooldown with Anthropic and Google AI Studio.
 DeepSeek is running well. I haven't tried OpenAI and others yet.
 
+2. Github on UTM VM
+#1 Login was a challenge using Firefox / Chromium. There's circus involved as "gh auth" fails too soon. The trick is to start one cycle but not click submit on the browser. Then restart it on CLI, and sychronize second key of CLI with first submit of the browser. Then it works.
