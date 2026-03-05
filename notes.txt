@@ -1,13 +1,25 @@
 1. OpenClaw on Ubuntu VM (UTM on Macbook Air/M3)
 
-Challenge #1: M3 is ARM, and there is no official Chrome for Ubuntu/ARM. Firefox doesn't work with OpenClaw.
+#1 (Solved): M3 is ARM, and there is no official Chrome for Ubuntu/ARM. Firefox doesn't work with OpenClaw.
 Tried alternatives like: Chromium and Brave.
 There is some awkwardness in this setup where the browser window opened by OpenClaw is unable to download files. It was quite a task to get "Relay" to work as an extension, and force OpenClaw to reuse browser window opened by me.
 
-Challenge #2: On Mac UTM, set the VM to use a different MAC and get its own IP address. Don't reuse Mac's internet connection. There was some trouble for UTM to reuse Mac's IP properly in IPv6 format, and blocked Telegram from working properly.
+#2 (Solved): On Mac UTM, set the VM to use a different MAC and get its own IP address. Don't reuse Mac's internet connection. There was some trouble for UTM to reuse Mac's IP properly in IPv6 format, and blocked Telegram from working properly.
 
-Challenge #3: I keep running into ratelimit and cooldown with Anthropic and Google AI Studio.
+#3 (Solved): I keep running into ratelimit and cooldown with Anthropic and Google AI Studio.
 DeepSeek is running well. I haven't tried OpenAI and others yet.
+
+#4 (Not fixed): Making dashboard visible on LAN. It requires config like this -
+    "mode": "remote",
+    "bind": "lan",
+    "tls": {
+      "enabled": true,
+      "autoGenerate": true
+    },
+    "remote": {
+      "url": "wss://192.168.1.XX:18789" 
+    }
+But even after all this RPC Probe was still trying 127.0.0.1 that fails.
 
 2. Github on UTM VM
 #1 Login was a challenge using Firefox / Chromium. There's circus involved as "gh auth" fails too soon. The trick is to start one cycle but not click submit on the browser. Then restart it on CLI, and sychronize second key of CLI with first submit of the browser. Then it works.
