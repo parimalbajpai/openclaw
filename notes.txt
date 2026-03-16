@@ -23,3 +23,6 @@ But even after all this RPC Probe was still trying 127.0.0.1 that fails.
 
 2. Github on UTM VM
 #1 Login was a challenge using Firefox / Chromium. There's circus involved as "gh auth" fails too soon. The trick is to start one cycle but not click submit on the browser. Then restart it on CLI, and sychronize second key of CLI with first submit of the browser. Then it works.
+
+3. UTM VM
+#1: UTM Ubuntu on Mac doesn't auto-sync time. Tricks are to install QEMU agent as explained by Gemini.
