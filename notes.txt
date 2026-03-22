@@ -26,3 +26,17 @@ But even after all this RPC Probe was still trying 127.0.0.1 that fails.
 
 3. UTM VM
 #1: UTM Ubuntu on Mac doesn't auto-sync time. Tricks are to install QEMU agent as explained by Gemini.
+
+4. Google web_search
+Add this: 
+"tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "gemini",
+        "gemini": {
+          "apiKey": "deleted",
+          "model": "gemini-2.5-flash"
+        }
+      },
+Don't need to add "plugins" section as shown in older results.
