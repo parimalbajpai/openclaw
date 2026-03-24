@@ -1,15 +1,15 @@
 #1. OpenClaw on Ubuntu VM (UTM on Macbook Air/M3)
 
-  #a (Solved): M3 is ARM, and there is no official Chrome for Ubuntu/ARM. Firefox doesn't work with OpenClaw.
+  #a. (Solved): M3 is ARM, and there is no official Chrome for Ubuntu/ARM. Firefox doesn't work with OpenClaw.
 Tried alternatives like: Chromium and Brave.
 There is some awkwardness in this setup where the browser window opened by OpenClaw is unable to download files. It was quite a task to get "Relay" to work as an extension, and force OpenClaw to reuse browser window opened by me.
 
-  #b (Solved): On Mac UTM, set the VM to use a different MAC and get its own IP address. Don't reuse Mac's internet connection. There was some trouble for UTM to reuse Mac's IP properly in IPv6 format, and blocked Telegram from working properly.
+  #b. (Solved): On Mac UTM, set the VM to use a different MAC and get its own IP address. Don't reuse Mac's internet connection. There was some trouble for UTM to reuse Mac's IP properly in IPv6 format, and blocked Telegram from working properly.
 
-  #c (Solved): I keep running into ratelimit and cooldown with Anthropic and Google AI Studio.
+  #c. (Solved): I keep running into ratelimit and cooldown with Anthropic and Google AI Studio.
 DeepSeek is running well. I haven't tried OpenAI and others yet.
 
-  #d (Not fixed): Making dashboard visible on LAN. It requires config like this -
+  #d. (Not fixed): Making dashboard visible on LAN. It requires config like this -
     "mode": "remote",
     "bind": "lan",
     "tls": {
@@ -22,7 +22,7 @@ DeepSeek is running well. I haven't tried OpenAI and others yet.
 But even after all this RPC Probe was still trying 127.0.0.1 that fails.
 
 #2. Github on UTM VM
-#1 Login was a challenge using Firefox / Chromium. There's circus involved as "gh auth" fails too soon. The trick is to start one cycle but not click submit on the browser. Then restart it on CLI, and sychronize second key of CLI with first submit of the browser. Then it works.
+  #a. Login was a challenge using Firefox / Chromium. There's circus involved as "gh auth" fails too soon. The trick is to start one cycle but not click submit on the browser. Then restart it on CLI, and sychronize second key of CLI with first submit of the browser. Then it works.
 
 #3. UTM VM
 UTM Ubuntu on Mac doesn't auto-sync time. Tricks are to install QEMU agent as explained by Gemini.
