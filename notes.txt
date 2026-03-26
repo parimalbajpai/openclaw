@@ -40,3 +40,5 @@ Add this:
         }
       },
 Don't need to add "plugins" section as shown in older results.
+
+#5. Google API/ cloud/ workspace access: final URL won't open on Chrome/Ubuntu/Arm64; use Brave.
