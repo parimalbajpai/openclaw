@@ -44,7 +44,6 @@ Don't need to add "plugins" section as shown in older results.
 #5. Google API/ cloud/ workspace access
   #a. Final URL won't open on Chrome/Ubuntu/Arm64; use Brave.
   #b. A lot of articles forget to mention installing the skill using: clawhub install gog
-  #c. Struggling to place credentials correctly and env for GOG_ACCOUNT and GOG_KEYRING_PASSWORD
-      here?     /home/parimal/.local/share/gog
-      or here?  /home/parimal/.config/gogcli/credentials.json
-      and what goes here? /home/parimal/.config/systemd/user/openclaw-gateway.service
+  #c. Place credentials here: ~/.config/gogcli/credentials.json
+  #d. GOG_KEYRING_PASSWORD here: ~/.config/systemd/user/openclaw-gateway.service
+  #e. GOG_ACCOUNT not mentioned anywhere 
