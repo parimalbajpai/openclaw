@@ -47,3 +47,4 @@ Don't need to add "plugins" section as shown in older results.
   #c. Place credentials here: ~/.config/gogcli/credentials.json
   #d. GOG_KEYRING_PASSWORD here: ~/.config/systemd/user/openclaw-gateway.service
   #e. GOG_ACCOUNT not mentioned anywhere 
+  #f. Didn't need exec pathPrepend config
