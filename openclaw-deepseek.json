@@ -1,11 +1,11 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.2.23",
-    "lastTouchedAt": "2026-02-25T13:37:49.886Z"
+    "lastTouchedVersion": "2026.4.15",
+    "lastTouchedAt": "2026-04-17T10:17:03.667Z"
   },
   "wizard": {
-    "lastRunAt": "2026-02-25T13:37:49.795Z",
-    "lastRunVersion": "2026.2.23",
+    "lastRunAt": "2026-03-21T18:56:18.303Z",
+    "lastRunVersion": "2026.3.2",
     "lastRunCommand": "configure",
     "lastRunMode": "local"
   },
@@ -33,7 +33,7 @@
     "providers": {
       "deepseek": {
         "baseUrl": "https://api.deepseek.com/",
-        "apiKey": "delete",
+        "apiKey": "deleted",
         "api": "openai-completions",
         "models": [
           {
@@ -59,7 +59,7 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "deepseek/deepseek-reasoner",
+        "primary": "deepseek/deepseek-reasoner"
       },
       "models": {
         "deepseek/deepseek-reasoner": {}
@@ -71,6 +71,17 @@
       "maxConcurrent": 4,
       "subagents": {
         "maxConcurrent": 8
+      }
+    }
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "gemini"
+      },
+      "fetch": {
+        "enabled": false
       }
     }
   },
@@ -105,7 +116,9 @@
       "dmPolicy": "pairing",
       "botToken": "deleted",
       "groupPolicy": "allowlist",
-      "streaming": "off",
+      "streaming": {
+        "mode": "off"
+      },
       "network": {
         "autoSelectFamily": false
       }
@@ -115,10 +128,6 @@
     "port": 18789,
     "mode": "local",
     "bind": "loopback",
-    "tls": {
-      "enabled": false,
-      "autoGenerate": true
-    },
     "auth": {
       "mode": "token",
       "token": "deleted"
@@ -126,6 +135,10 @@
     "tailscale": {
       "mode": "off",
       "resetOnExit": false
+    },
+    "tls": {
+      "enabled": false,
+      "autoGenerate": true
     },
     "nodes": {
       "denyCommands": [
@@ -141,6 +154,21 @@
   "plugins": {
     "entries": {
       "telegram": {
+        "enabled": true
+      },
+      "google": {
+        "config": {
+          "webSearch": {
+            "apiKey": "deleted",
+            "model": "gemini-2.5-flash"
+          }
+        },
+        "enabled": true
+      },
+      "deepseek": {
+        "enabled": true
+      },
+      "browser": {
         "enabled": true
       }
     }
