@@ -51,3 +51,5 @@ Don't need to add "plugins" section as shown in older results.
   Useful help-pages:
     #i. https://www.digitalocean.com/community/tutorials/connect-google-to-openclaw - skip Step 1 of Droplet; in Step 5 open the URL in browser, and skip steps about port number and SSH tunnel
     #ii. https://www.agentmail.to/blog/connect-openclaw-to-gmail - somewhat useful
+
+#6. OpenClaw + Ollama optimizations from https://www.reddit.com/r/LocalLLaMA/comments/1sdnf43/fix_openclaw_ollama_local_models_silently_timing/
