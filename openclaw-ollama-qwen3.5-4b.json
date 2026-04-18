@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.2.23",
-    "lastTouchedAt": "2026-02-25T13:37:49.886Z"
+    "lastTouchedVersion": "2026.4.15",
+    "lastTouchedAt": "2026-04-17T19:03:49.546Z"
   },
   "wizard": {
     "lastRunAt": "2026-02-25T13:37:49.795Z",
@@ -33,12 +33,12 @@
     "providers": {
       "ollama": {
         "baseUrl": "http://parimals-macbook-air.local:11434/",
-        "apiKey": "ollama-local",
+        "apiKey": "deleted",
         "models": [
           {
             "id": "qwen3.5:4b",
             "name": "qwen3.5:4b",
-            "contextWindow": 65536,
+            "contextWindow": 65536
           }
         ]
       }
@@ -47,7 +47,14 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "ollama/qwen3.5:4b",
+        "primary": "ollama/qwen3.5:4b"
+      },
+      "thinkingDefault": "off",
+      "timeoutSeconds": 600,
+      "skipBootstrap": true,
+      "bootstrapTotalMaxChars": 500,
+      "llm": {
+        "idleTimeoutSeconds": 300
       },
       "models": {
         "ollama/qwen3.5:4b": {}
@@ -66,11 +73,7 @@
     "web": {
       "search": {
         "enabled": true,
-        "provider": "gemini",
-        "gemini": {
-          "apiKey": "deleted",
-          "model": "gemini-2.5-flash"
-        }
+        "provider": "gemini"
       },
       "fetch": {
         "enabled": false
@@ -97,7 +100,7 @@
           "enabled": true
         },
         "session-memory": {
-          "enabled": true
+          "enabled": false
         }
       }
     }
@@ -108,7 +111,9 @@
       "dmPolicy": "pairing",
       "botToken": "deleted",
       "groupPolicy": "allowlist",
-      "streaming": "off",
+      "streaming": {
+        "mode": "off"
+      },
       "network": {
         "autoSelectFamily": false
       }
@@ -118,10 +123,6 @@
     "port": 18789,
     "mode": "local",
     "bind": "loopback",
-    "tls": {
-      "enabled": false,
-      "autoGenerate": true
-    },
     "auth": {
       "mode": "token",
       "token": "deleted"
@@ -129,6 +130,10 @@
     "tailscale": {
       "mode": "off",
       "resetOnExit": false
+    },
+    "tls": {
+      "enabled": false,
+      "autoGenerate": true
     },
     "nodes": {
       "denyCommands": [
@@ -144,6 +149,21 @@
   "plugins": {
     "entries": {
       "telegram": {
+        "enabled": true
+      },
+      "google": {
+        "config": {
+          "webSearch": {
+            "apiKey": "deleted",
+            "model": "gemini-2.5-flash"
+          }
+        },
+        "enabled": true
+      },
+      "ollama": {
+        "enabled": true
+      },
+      "browser": {
         "enabled": true
       }
     }
