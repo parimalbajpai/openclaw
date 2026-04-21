@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.4.15",
+    "lastTouchedAt": "2026-04-17T19:03:49.546Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-25T13:37:49.795Z",
+    "lastRunVersion": "2026.2.23",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "browser": {
+    "enabled": true,
+    "executablePath": "/usr/bin/brave-browser",
+    "headless": false,
+    "attachOnly": true,
+    "defaultProfile": "chrome"
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "api_key"
+      },
+      "google:default": {
+        "provider": "google",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "ollama": {
+        "baseUrl": "http://parimals-macbook-air.local:11434/",
+        "apiKey": "ollama-local",
+        "models": [
+          {
+            "id": "gemma4:e4b-it-q4_K_M",
+            "name": "gemma4:e4b-it-q4_K_M",
+            "contextWindow": 32000,
+            "maxTokens": 24000
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "ollama/gemma4:e4b-it-q4_K_M"
+      },
+      "thinkingDefault": "off",
+      "timeoutSeconds": 600,
+      "skipBootstrap": true,
+      "bootstrapTotalMaxChars": 500,
+      "llm": {
+        "idleTimeoutSeconds": 300
+      },
+      "models": {
+        "ollama/gemma4:e4b-it-q4_K_M": {}
+      },
+      "workspace": "/home/parimal/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "gemini"
+      },
+      "fetch": {
+        "enabled": false
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "8263443495:AAGZ5jser0sNjhtTodgCVQwe_0riPuOQYZM",
+      "groupPolicy": "allowlist",
+      "streaming": {
+        "mode": "off"
+      },
+      "network": {
+        "autoSelectFamily": false
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "ce3ff8d5de2725d496ff183f065071196cd4cc951202ba59"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "tls": {
+      "enabled": false,
+      "autoGenerate": true
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "calendar.add",
+        "contacts.add",
+        "reminders.add"
+      ]
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      },
+      "google": {
+        "config": {
+          "webSearch": {
+            "apiKey": "AIzaSyD62MWRVdXoZt5SRbCmfKhy4Z9L18pidHg",
+            "model": "gemini-2.5-flash"
+          }
+        },
+        "enabled": true
+      },
+      "ollama": {
+        "enabled": true
+      },
+      "browser": {
+        "enabled": true
+      }
+    }
+  }
+}
