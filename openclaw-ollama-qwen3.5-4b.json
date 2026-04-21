@@ -38,7 +38,8 @@
           {
             "id": "qwen3.5:4b",
             "name": "qwen3.5:4b",
-            "contextWindow": 16000
+            "contextWindow": 32000,
+            "maxTokens": 24000
           }
         ]
       }
