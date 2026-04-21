@@ -33,7 +33,7 @@
     "providers": {
       "ollama": {
         "baseUrl": "http://parimals-macbook-air.local:11434/",
-        "apiKey": "ollama-local",
+        "apiKey": "deleted",
         "models": [
           {
             "id": "gemma4:e4b-it-q4_K_M",
@@ -110,7 +110,7 @@
     "telegram": {
       "enabled": true,
       "dmPolicy": "pairing",
-      "botToken": "8263443495:AAGZ5jser0sNjhtTodgCVQwe_0riPuOQYZM",
+      "botToken": "deleted",
       "groupPolicy": "allowlist",
       "streaming": {
         "mode": "off"
@@ -126,7 +126,7 @@
     "bind": "loopback",
     "auth": {
       "mode": "token",
-      "token": "ce3ff8d5de2725d496ff183f065071196cd4cc951202ba59"
+      "token": "deleted"
     },
     "tailscale": {
       "mode": "off",
@@ -155,7 +155,7 @@
       "google": {
         "config": {
           "webSearch": {
-            "apiKey": "AIzaSyD62MWRVdXoZt5SRbCmfKhy4Z9L18pidHg",
+            "apiKey": "deleted",
             "model": "gemini-2.5-flash"
           }
         },
