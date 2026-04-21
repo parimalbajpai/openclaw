@@ -1,3 +1,12 @@
+Special note: ollama + gemma4:e4b-it-q4_K_M is blazing fast on M3!!
+                "contextWindow": 32000,
+                "maxTokens": 24000
+                "thinkingDefault": "off",
+                "timeoutSeconds": 600,
+                "skipBootstrap": true,
+                "bootstrapTotalMaxChars": 500,
+                "llm"."idleTimeoutSeconds": 300
+
 #1. OpenClaw on Ubuntu VM (UTM on Macbook Air/M3)
 
   #a. (Solved): M3 is ARM, and there is no official Chrome for Ubuntu/ARM. Firefox doesn't work with OpenClaw.
